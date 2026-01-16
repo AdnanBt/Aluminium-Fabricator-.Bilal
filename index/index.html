@@ -1,1 +1,231 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aluminum & Glass Works Kuwait | Doors, Windows & Facades</title>
+
+<meta name="description" content="Professional aluminum and glass works in Kuwait. Doors, windows, facades, partitions & shopfronts. Call or WhatsApp for free quotation.">
+<meta name="keywords" content="aluminum works Kuwait, glass works Kuwait, aluminum doors Kuwait, aluminum windows Kuwait, glass facade Kuwait">
+<meta name="author" content="AluGlass Kuwait">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --dark:#020617;
+  --dark2:#0b0f14;
+  --card:#111827;
+  --yellow:#f6b01e;
+  --gray:#9ca3af;
+}
+body{font-family:Segoe UI,Tahoma,sans-serif;background:var(--dark);color:#fff}
+.text-yellow{color:var(--yellow)}
+.btn-yellow{background:var(--yellow);border:none;font-weight:600}
+.btn-yellow:hover{background:#d89b1a}
+
+/* NAVBAR */
+.navbar{background:rgba(2,6,23,.95)}
+
+/* HERO */
+.hero-carousel{height:100vh;position:relative;overflow:hidden}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.hero-slide.active{opacity:1}
+.hero-slide img{width:100%;height:100%;object-fit:cover}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(rgba(2,6,23,.7),rgba(2,6,23,.9));
+  display:flex;align-items:center;justify-content:center;text-align:center;
+}
+
+/* SERVICES */
+.services{background:var(--dark2);padding:80px 0}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.service-card{
+  background:var(--card);
+  border-radius:16px;
+  overflow:hidden;
+  transition:.4s;
+}
+.service-card:hover{transform:translateY(-6px)}
+.service-card img{width:100%;height:200px;object-fit:cover}
+.service-card h3{text-align:center;padding:15px;font-weight:600}
+
+/* PORTFOLIO */
+.portfolio{background:var(--dark2);padding:80px 0;text-align:center}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.portfolio-item{position:relative;border-radius:16px;overflow:hidden}
+.portfolio-item img{width:100%;height:260px;object-fit:cover;transition:.5s}
+.portfolio-item:hover img{transform:scale(1.08)}
+.portfolio-overlay{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,.55);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:.4s
+}
+.portfolio-item:hover .portfolio-overlay{opacity:1}
+
+/* WHATSAPP FLOAT */
+.whatsapp-btn{
+  position:fixed;bottom:20px;right:20px;
+  background:#25D366;color:#fff;
+  width:60px;height:60px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;z-index:999
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold text-yellow" href="#">AluGlass KW</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div id="nav" class="collapse navbar-collapse">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+<li class="nav-item"><a class="btn btn-yellow ms-lg-3" href="tel:+96550762998">Call Now</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero-carousel"></section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5 bg-light text-dark">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<h2>About <span class="text-yellow">Us</span></h2>
+<p>We are a Kuwait-based aluminium and glass fabrication company delivering modern, durable and cost-effective solutions for residential and commercial projects.</p>
+<ul class="list-unstyled">
+<li>✔ Aluminium Doors & Windows</li>
+<li>✔ Glass Facades & Shopfronts</li>
+<li>✔ Custom Fabrication</li>
+</ul>
+</div>
+<div class="col-lg-6">
+<img loading="lazy" class="img-fluid rounded shadow"
+src="https://raw.githubusercontent.com/AdnanBt/Aluminium-Fabricator-.Bilal/main/assets/img/about/about.jpg">
+</div>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+<div class="container">
+<h2 class="text-center mb-5">Our <span class="text-yellow">Services</span></h2>
+<div id="servicesGrid" class="services-grid"></div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+<div class="container">
+<h2>Recent <span class="text-yellow">Projects</span></h2>
+<p class="text-gray mb-4">Live aluminium & glass works completed in Kuwait</p>
+<div id="portfolioGrid" class="portfolio-grid"></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5 bg-dark text-light">
+<div class="container text-center">
+<h2>Contact <span class="text-yellow">Us</span></h2>
+<form onsubmit="sendWhatsApp(event)" class="col-lg-6 mx-auto mt-4">
+<input id="name" class="form-control mb-3" placeholder="Your Name" required>
+<input id="phone" class="form-control mb-3" placeholder="Phone Number" required>
+<textarea id="message" class="form-control mb-3" placeholder="Your Requirement"></textarea>
+<button class="btn btn-yellow w-100">Send via WhatsApp</button>
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-center py-4">
+<p class="small mb-1">Aluminum & Glass Works Kuwait</p>
+<p class="small">&copy; 2026 AluGlass KW</p>
+</footer>
+
+<a href="https://wa.me/96550762998" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* HERO AUTO */
+const heroImages=["door.jpg","window.jpg","facade.jpg"];
+const heroBase="https://raw.githubusercontent.com/AdnanBt/Aluminium-Fabricator-.Bilal/main/assets/hero/";
+const hero=document.getElementById("home");
+heroImages.forEach((img,i)=>{
+  hero.innerHTML+=`
+  <div class="hero-slide ${i===0?'active':''}">
+    <img src="${heroBase+img}">
+    <div class="hero-overlay">
+      <div>
+        <h1 class="display-5 fw-bold">Aluminium & Glass Works</h1>
+        <p>Doors • Windows • Facades</p>
+      </div>
+    </div>
+  </div>`;
+});
+let hi=0;
+setInterval(()=>{
+document.querySelectorAll('.hero-slide')[hi].classList.remove('active');
+hi=(hi+1)%heroImages.length;
+document.querySelectorAll('.hero-slide')[hi].classList.add('active');
+},3500);
+
+/* SERVICES AUTO */
+const services=["doors","windows","shopfront","facade"];
+const sGrid=document.getElementById("servicesGrid");
+services.forEach(s=>{
+sGrid.innerHTML+=`
+<div class="service-card">
+<img loading="lazy" src="https://raw.githubusercontent.com/AdnanBt/Aluminium-Fabricator-.Bilal/main/assets/services/${s}.jpg">
+<h3>${s.replace(/^\w/,c=>c.toUpperCase())}</h3>
+</div>`;
+});
+
+/* PORTFOLIO AUTO */
+const pGrid=document.getElementById("portfolioGrid");
+["p1.jpg","p2.jpg","p3.jpg","p4.jpg"].forEach(p=>{
+pGrid.innerHTML+=`
+<div class="portfolio-item">
+<img loading="lazy" src="https://raw.githubusercontent.com/AdnanBt/Aluminium-Fabricator-.Bilal/main/assets/portfolio/${p}">
+<div class="portfolio-overlay"><span>Completed Project</span></div>
+</div>`;
+});
+
+/* WHATSAPP FORM */
+function sendWhatsApp(e){
+e.preventDefault();
+window.open(`https://wa.me/96550762998?text=Name:${name.value}%0APhone:${phone.value}%0AMessage:${message.value}`);
+}
+</script>
+
+</body>
+</html>
